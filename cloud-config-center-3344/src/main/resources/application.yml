@@ -1,0 +1,18 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  git@github.com:aicowen/sprincloud-config.git
+          host-key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCjzH6NYfkP7ZQ623GncLFgLOy1DlSIefzuJ8vCpgNV4XDVJdw2VckNnCYhwrt1P+qkoYEO4npRZ9R3pHE9YULZARXRTQfHXrHkMu+C+6ZH0LHtDP8DweJG2qf9Qebyc6d5kzdfQLGR1TcG1FLbA43NhPY4zVURSgN4tBAtOfrkCxP3cMss25nB/G79RBb8L94DVCoXfgP8FFQIk5hC+odNNq4UI6jMLxhZ+f+hZ/fXiCziDk9OtoWaGI0ZW1ldW/hPL264FGz8FTkmZtWLg3WOQ57HxImtTWPYmqj15kGPhOHgKAP4gJjJu7r7URWQXyHfvMYqfVaEZJpT879MT3ToLBXMXwrj9NZHJbNbidNSAc2QDg9iwxTKcSl5q29E7MkQ335ir37QlT7pIid9k3sMFnZz11gQv/Lpg3AxPRCdl+RnB+3tLn7xRybq5FfWJ1RNPGiRtt/cwmSTMkAYOS1pH0PQTpDDXznyMF8eYBxyjvHp8uI0eGE0/q0hA8hTRb8= w@LAPTOP-OUJ4ARRU
+          search-paths:
+            - springcloud-config
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
